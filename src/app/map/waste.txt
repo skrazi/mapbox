@@ -1,0 +1,275 @@
+this.map.addSource('markers', {
+      type: 'geojson',
+      data: './assets/markers.geojson'
+    });
+
+    console.log(this.map.getSource('markers'));
+
+    // Add map control
+
+    const popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    });
+
+    this.map.on('load', () => {
+      this.map.addSource('markers', {
+        type: 'geojson',
+        data: {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "description": "<strong>LocationName</strong><table><tr><td>BPS</td><td>100</td></tr></table>"
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  70.09277343749999,
+                  22.963451264973543
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {},
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -93.94340515136719,
+                  29.901377129352113
+                ]
+              }
+            }
+          ]
+        }
+      })
+    })
+
+    this.map.on('load', (e) => {
+      console.log(this.map.getSource('markers'));
+    })
+  }
+
+
+  layout: {
+          "icon-image": "marker-icon",
+          "icon-size": 2,
+          "icon-anchor": "bottom",
+          "text-field": "500",
+          "icon-text-fit": "width"
+        }
+
+
+"icon-image": [
+            "match",
+            ["get", "alertType"],
+            "L4",
+            "ripple-effect-l4",
+            "L3",
+            "ripple-effect-l3",
+            "L2",
+            "ripple-effect-l2",
+            "L1",
+            "ripple-effect-l1",
+            "ripple-effect-l1"
+          ],
+
+this.map.on('load', () => {
+        this.map.addSource('markers', {
+        type: 'geojson',
+        data: './assets/markers2.geojson', tolerance: 0
+      });
+
+      this.map.addLayer({
+        id: "points",
+        type: "circle",
+        source: "markers",
+        paint: {
+          "circle-color":   [
+            "match",
+            ["get", "alertType"],
+            "L4",
+            "#ff0000",
+            "L3",
+            "#ffff00",
+            "L2",
+            "#ff9900",
+            "#d2a679"
+          ],
+          "circle-radius": [
+            "match",
+            ["get", "alertType"],
+            "L4",
+            17,
+            "L3",
+            14,
+            "L2",
+            11,
+            8
+          ],
+          "circle-translate": [0, -33]
+        }
+      })
+})
+
+
+
+
+
+// const minimapContainer = document.createElement('div');
+    // minimapContainer.className = 'minimap mapboxgl-ctrl-bottom-right';
+    // minimapContainer.id = 'minimap';
+
+
+
+    // this.minimap = new mapboxgl.Map({
+    //   accessToken: environment.mapbox.accessToken,
+    //   container: minimapContainer,
+    //   style: this.style,
+    //   zoom: -1,
+    //   center: [0,15],
+    //   maxBounds: [[-180, -90], [180, 90]],
+    //   renderWorldCopies: false,
+    //   attributionControl: false
+    // });
+    // this.minimap.addControl(new mapboxgl.NavigationControl({showCompass: false}), "bottom-right");
+
+    //this.map.getContainer().appendChild(minimapContainer);
+    
+    // northeastern and southwestern coordinates
+    // const bbox = new mapboxgl.LngLatBounds([-180, -90], [180, 90]);
+    // this.map.fitBounds(bbox)
+
+// this.minimap.on('load', () => {
+
+    //   this.minimap.addSource('minimap-source', {
+    //       type: 'geojson',
+    //       data: {
+    //         type: 'Feature',
+    //         properties: {},
+    //         geometry: {
+    //           type: 'Polygon',
+    //           coordinates:[ [
+    //             [-180, -90],
+    //             [-180,90],
+    //             [180,90],
+    //             [180,-90],
+    //             [-180,-90]
+    //           ]
+    //         ]
+    //         }
+    //       }
+    //   })
+    //   this.minimap.addLayer({
+    //     id: 'minimap-fill',
+    //     type: 'fill',
+    //     source: 'minimap-source',
+    //     paint: {
+    //       "fill-color": "#555555",
+    //       "fill-opacity":0.45
+    //     }
+    //   })  
+    // })
+
+    // var geojson = {
+    //   "type": "FeatureCollection",
+    //   "features": [
+    //     {
+    //       "type": "Feature",
+    //       "properties": {
+    //         "description": "Port Arthur, Texas, USA",
+    //         "scale": 2
+    //       },
+    //       "geometry": {
+    //         "type": "Point",
+    //         "coordinates": [
+    //           -93.95713806152342,
+    //           29.89959138575595
+    //         ]
+    //       }
+    //     },
+    //     {
+    //       "type": "Feature",
+    //       "properties": {
+    //         "description": "Tuna Port, Gujrat, India",
+    //         "scale": 0.5
+    //       },
+    //       "geometry": {
+    //         "type": "Point",
+    //         "coordinates": [
+    //           70.1092529296875,
+    //           22.94574762338832
+    //         ]
+    //       }
+    //     }
+    //   ]
+    // }
+
+    // for (const marker of geojson.features) {
+    //   const el = document.createElement('div');
+    //   el.appendChild(document.createElement('div'));
+    //   const dot = document.createElement('div');
+    //   dot.className = "dot";
+    //   el.appendChild(dot);
+    //   el.className = 'marker';
+    //   el.style.backgroundImage = "url(./assets/299087_marker_map_icon.svg)";
+    //   const pointer = new mapboxgl.Marker(el,{scale: marker.properties.scale}).setLngLat([marker.geometry.coordinates[0], marker.geometry.coordinates[1]])
+    //   .setPopup(new mapboxgl.Popup({offset: 20}).setText(marker.properties.description))
+    //   .addTo(this.map);
+    // }
+
+
+
+
+
+
+    //   // pointer.on("mouseenter", (e) => {
+    //   //   console.log("Hvefringlfkjds;")
+    //   //   pointer.setPopup(new mapboxgl.Popup({offset: 20})
+    //   //     .setText(marker.properties.description)
+    //   //   ).addTo(this.map);
+    //   // });
+
+    //   console.log([marker.geometry.coordinates[0], marker.geometry.coordinates[1]]);
+      
+    // }
+
+    // geojson.features.forEach((marker) => {
+    //   var el = document.createElement('div');
+    //   el.className = 'marker';
+
+    //   new mapboxgl.Marker(el)
+    //   .setLngLat([marker.geometry.coordinates[0], marker.geometry.coordinates[1]])
+    //   .addTo(this.map);
+    //   console.log([marker.geometry.coordinates[0], marker.geometry.coordinates[1]]);
+    // });
+
+  //   const marker1 = new mapboxgl.Marker({
+  //     color: "#ff9900",
+  //     scale: 0.6
+  //   }).setLngLat([30.5, 50.5]).addTo(this.map);
+
+  //   const portArthurMarker = new mapboxgl.Marker(document.getElementById('marker'), {offset: [0,-10]}).setLngLat([-93.939949, 29.884951]).addTo(this.map)
+  //   .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"));
+
+  //   const gujrat = new mapboxgl.Marker({
+  //     color: "#ffff00",
+  //     scale: 0.4
+  //   }).setLngLat([72.136230, 22.309425]).addTo(this.map);
+
+  //   const kuwait = new mapboxgl.Marker({
+  //     color: "#009900",
+  //     scale: 0.4
+  //   }).setLngLat([47.990341, 29.378586]).addTo(this.map);
+
+  //   this.map.on('mouseenter', () => {
+  //     console.log(this.map.getCenter());
+  //   })
+  // }
+
+
+
+
+

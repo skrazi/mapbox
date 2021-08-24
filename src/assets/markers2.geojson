@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 1,
+        "description": "Port Arthur, Texas, USA",
+        "alertType": "L4",
+        "alarms": 500
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.95713806152342,
+          29.89959138575595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 2,
+        "description": "Tuna Port, Gujarat, India",
+        "alertType": "L3",
+        "alarms": 227
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.1092529296875,
+          22.94574762338832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 3,
+        "description": "Doha Port, Kuwait",
+        "alertType": "L2",
+        "alarms": 53
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.2794189453125,
+          29.63435225887697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 4,
+        "description": "Some Place, United Kingdom",
+        "alertType": "L1",
+        "alarms": 12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.1416015625,
+          50.226123744371364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 5,
+        "description": "Jurong Island, Singapore",
+        "alertType": "L3",
+        "alarms": 151
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.69222640991211,
+          1.2637973114856753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 6,
+        "description": "Mayumba, Gabon",
+        "alertType": "L2",
+        "alarms": 54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.646417140960693,
+          -3.4402351389359564
+        ]
+      }
+    }
+  ]
+}

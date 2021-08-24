@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+.marker {
+  height: 80px;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+
+/* #mapbox-minimap {
+  position: absolute;
+  width: 240px;
+  height: 120px;
+  border: 1px solid dodgerblue;
+} */
+
+table .value {
+  text-align: right;
+  font-weight: 700;
+  padding-left: 40px;
+}
+
+table .name {
+  text-align: left
+}
+
+
+
+/* 
+<div class="loadingio-spinner-ripple-ty2a6bj3mmp">
+<div class="ldio-e5qt3z5h1rp">
+<div></div>
+<div></div>
+</div>
+</div>
+@keyframes ldio-e5qt3z5h1rp {
+  0% {
+    top: 94px;
+    left: 94px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 33px;
+    left: 33px;
+    width: 122px;
+    height: 122px;
+    opacity: 0;
+  }
+}.ldio-e5qt3z5h1rp div {
+  position: absolute;
+  border-width: 6px;
+  border-style: solid;
+  opacity: 1;
+  border-radius: 50%;
+  animation: ldio-e5qt3z5h1rp 2.2222222222222223s cubic-bezier(0,0.2,0.8,1) infinite;
+}.ldio-e5qt3z5h1rp div:nth-child(1) {
+  border-color: #ff0000;
+  animation-delay: 0s;
+}
+.ldio-e5qt3z5h1rp div:nth-child(2) {
+  border-color: #ff0000;
+  animation-delay: -1.1111111111111112s;
+}
+.loadingio-spinner-ripple-ty2a6bj3mmp {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-e5qt3z5h1rp {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; //see note above 
+}
+.ldio-e5qt3z5h1rp div { box-sizing: content-box; } */

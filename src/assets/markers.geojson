@@ -1,0 +1,150 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<strong>LocationName</strong>
+        <table>
+          <tr>
+            <td>BPS</td>
+            <td>100</td>
+          </tr>
+        </table>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.09277343749999,
+          22.963451264973543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.94340515136719,
+          29.901377129352113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.18615722656249,
+          11.662996112308047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.778076171875,
+          -0.7086000996551037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.23046874999999,
+          30.44867367928756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.55859375,
+          23.241346102386135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.3203125,
+          23.40276490540795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.12109374999999,
+          12.726084296948196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.28515625,
+          55.677584411089526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<strong>LocationName</strong>
+        <table>
+          <tr>
+            <td>BPS</td>
+            <td>100</td>
+          </tr>
+        </table>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.65625,
+          -0.3515602939922709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<strong>LocationName</strong>
+        <table>
+          <tr>
+            <td>BPS</td>
+            <td>100</td>
+          </tr>
+        </table>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.845703125,
+          36.87962060502676
+        ]
+      }
+    }
+  ]
+}

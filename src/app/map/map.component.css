@@ -1,0 +1,15 @@
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+/* #marker img{
+  height: 50px;
+  width: auto;
+} */
+
+/* #minimap {
+  position: absolute;
+  width: 270px;
+  height: 180px;
+} */
+
+table .value {
+  text-align: left;
+}
