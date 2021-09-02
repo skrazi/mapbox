@@ -74,10 +74,10 @@ export class Minimap extends mapboxgl.NavigationControl {
 
     this.options = {
       id: 'mapbox-minimap',
-      width: 320,
+      width: 240,
       height: 180,
-      style: 'mapbox://styles/mapbox/streets-v8',
-      center: [0, 15],
+      style: './assets/minimap-style.json',
+      center: [0, 25],
 
       zoomLevelFixed: false,
       zoomLevelOffset: -4,
@@ -86,7 +86,7 @@ export class Minimap extends mapboxgl.NavigationControl {
       lineWidth: 1,
       lineOpacity: 1,
 
-      fillColor: '#f80',
+      fillColor: '#000000',
       fillOpacity: 0.25,
 
       dragPan: false,
@@ -121,6 +121,7 @@ export class Minimap extends mapboxgl.NavigationControl {
       attributionControl: false,
       container: container,
       style: opts.style,
+      maxBounds: [[-180, -90], [180, 90]],
       center: [opts.center[0], opts.center[1]],
       renderWorldCopies: false,
     }));
@@ -134,9 +135,9 @@ export class Minimap extends mapboxgl.NavigationControl {
     this.onLoad = this.load.bind(this);
     miniMap.on('load', this.onLoad);
 
-    if (this.options.toggleDisplay) {
-      this.addToggleButton();
-    }
+    // if (this.options.toggleDisplay) {
+    //   this.addToggleButton();
+    // }
 
     return this.container;
   }
@@ -169,81 +170,81 @@ export class Minimap extends mapboxgl.NavigationControl {
     this.miniMap = null;
   }
 
-  addToggleButton(): void {
-    this.toggleDisplayButton = this.options.toggleDisplay
-      ? this.createButton(
-          '',
-          this.toggleButtonInitialTitleText(),
-          'minimap mapbox-ctrl-minimap-toggle-display mapbox-ctrl-minimap-toggle-display-' + this.options.togglePosition,
-          this.container,
-          this.toggle,
-          this
-        )
-      : undefined;
+  // addToggleButton(): void {
+  //   this.toggleDisplayButton = this.options.toggleDisplay
+  //     ? this.createButton(
+  //         '',
+  //         this.toggleButtonInitialTitleText(),
+  //         'minimap mapbox-ctrl-minimap-toggle-display mapbox-ctrl-minimap-toggle-display-' + this.options.togglePosition,
+  //         this.container,
+  //         this.toggle,
+  //         this
+  //       )
+  //     : undefined;
 
-    this.toggleDisplayButton.style.width = this.options.collapsedWidth + 'px';
-    this.toggleDisplayButton.style.height = this.options.collapsedHeight + 'px';
-  }
+  //   this.toggleDisplayButton.style.width = this.options.collapsedWidth + 'px';
+  //   this.toggleDisplayButton.style.height = this.options.collapsedHeight + 'px';
+  // }
 
-  createButton(html: string, title: string, className: string, container: HTMLDivElement, fn, context): HTMLAnchorElement {
-    const link = document.createElement('a');
-    link.className = className;
+  // createButton(html: string, title: string, className: string, container: HTMLDivElement, fn, context): HTMLAnchorElement {
+  //   const link = document.createElement('a');
+  //   link.className = className;
 
-    link.innerHTML = html;
-    link.href = '#';
-    link.title = title;
+  //   link.innerHTML = html;
+  //   link.href = '#';
+  //   link.title = title;
 
-    link.addEventListener('click', this.preventDefault);
-    link.addEventListener('mousedown', this.preventDefault);
-    link.addEventListener('dblclick', this.preventDefault);
+  //   link.addEventListener('click', this.preventDefault);
+  //   link.addEventListener('mousedown', this.preventDefault);
+  //   link.addEventListener('dblclick', this.preventDefault);
 
-    this.onToggleButtonClick = this.toggle.bind(this);
-    link.addEventListener('click', this.onToggleButtonClick);
+  //   this.onToggleButtonClick = this.toggle.bind(this);
+  //   link.addEventListener('click', this.onToggleButtonClick);
 
-    container.appendChild(link);
+  //   container.appendChild(link);
 
-    return link;
-  }
+  //   return link;
+  // }
 
-  toggleButtonInitialTitleText(): string {
-    if (this.options.minimized) {
-      return this.options.showText;
-    } else {
-      return this.options.hideText;
-    }
-  }
+  // toggleButtonInitialTitleText(): string {
+  //   if (this.options.minimized) {
+  //     return this.options.showText;
+  //   } else {
+  //     return this.options.hideText;
+  //   }
+  // }
 
-  public toggle(): void {
-    if (!this.minimized) {
-      this.minimize();
-    } else {
-      this.restore();
-    }
-  }
+  // public toggle(): void {
+  //   if (!this.minimized) {
+  //     this.minimize();
+  //   } else {
+  //     this.restore();
+  //   }
+  // }
 
-  private minimize(): void {
-    if (this.options.toggleDisplay) {
-      this.container.style.width = this.options.collapsedWidth + 'px';
-      this.container.style.height = this.options.collapsedHeight + 'px';
-      this.toggleDisplayButton.className += ' minimized-' + this.options.togglePosition;
-      this.toggleDisplayButton.title = this.options.showText;
-    } else {
-      this.container.style.display = 'none';
-    }
-    this.minimized = true;
-  }
+  // private minimize(): void {
+  //   if (this.options.toggleDisplay) {
+  //     this.container.style.width = this.options.collapsedWidth + 'px';
+  //     this.container.style.height = this.options.collapsedHeight + 'px';
+  //     this.toggleDisplayButton.className += ' minimized-' + this.options.togglePosition;
+  //     this.toggleDisplayButton.title = this.options.showText;
+  //   } else {
+  //     this.container.style.display = 'none';
+  //   }
+  //   this.minimized = true;
+  // }
 
-  private restore(): void {
-    if (this.options.toggleDisplay) {
-      this.container.style.width = this.options.width + 'px';
-      this.container.style.height = this.options.height + 'px';
-      this.toggleDisplayButton.className = this.toggleDisplayButton.className.replace('minimized-' + this.options.togglePosition, '');
-      this.toggleDisplayButton.title = this.options.hideText;
-    } else {
-      this.container.style.display = 'block';
-    }
-    this.minimized = false;
-  }
+  // private restore(): void {
+  //   if (this.options.toggleDisplay) {
+  //     this.container.style.width = this.options.width + 'px';
+  //     this.container.style.height = this.options.height + 'px';
+  //     this.toggleDisplayButton.className = this.toggleDisplayButton.className.replace('minimized-' + this.options.togglePosition, '');
+  //     this.toggleDisplayButton.title = this.options.hideText;
+  //   } else {
+  //     this.container.style.display = 'block';
+  //   }
+  //   this.minimized = false;
+  // }
 
   public changeLayer(layer: string): void {
     this.miniMap.setStyle(layer);
@@ -267,6 +268,38 @@ export class Minimap extends mapboxgl.NavigationControl {
         miniMap[i].disable();
       }
     });
+
+    miniMap.addSource('markers', {
+      type: 'geojson',
+      data: './assets/markers2.geojson'
+    });
+
+    miniMap.addLayer({
+      id: "circles",
+      type: "circle",
+      source: "markers",
+      paint: {
+        "circle-color":   [
+          "match",
+          ["get", "alertType"],
+          "L4", "#ff0000",
+          "L3", "#ffff00",
+          "L2", "#ff9900",
+          "L1", "#d2a679",
+          "#ff00ff"
+        ],
+        "circle-radius": [
+          "match",
+          ["get", "alertType"],
+          "L4",9,
+          "L3",7,
+          "L2",5,
+          "L1",3,
+          15
+        ],
+        //"circle-translate": [0, -33]
+      }
+    })
 
     this.addRect(miniMap, opts);
 

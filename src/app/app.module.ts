@@ -6,14 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { HmiComponent } from './hmi/hmi.component';
-import { DescriptionComponent } from './map/description/description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    HmiComponent,
-    DescriptionComponent
+    HmiComponent
   ],
   imports: [
     BrowserModule,

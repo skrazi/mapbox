@@ -271,5 +271,24 @@ this.map.on('load', () => {
 
 
 
+  {
+      "type": "Feature",
+      "properties": {
+        "siteId": 80,
+        "description": "Lake Charles, Texas, USA",
+        "alertType": "L2",
+        "alarms": 50
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.262939453125,
+          29.969211659636663
+        ]
+      }
+    },
+
+
+
 
 

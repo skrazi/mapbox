@@ -3,3 +3,32 @@
   <!-- <div class="minimap" id="minimap"></div>  -->
 </div>
 <!-- <span id="marker" #marker><img src="./assets/299087_marker_map_icon.svg"/></span> -->
+<div class="buttons">
+  <ul class="button-list">
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_en')">English</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_ar')">عربي</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_de')">Deutsch</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_ja')">日本</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_es')">español</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_ru')">русский</button>
+    </li>
+    <li class="button-item">
+      <button class="lang-button" (click)="changeLanguage('name_fr')">français</button>
+    </li> 
+  </ul>
+</div>
+
+<div>
+  <button class="lang-button" (click)="changeStyle()">Change Style</button>
+</div>

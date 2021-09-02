@@ -9,7 +9,31 @@
   width: 270px;
   height: 180px;
 } */
+#mapbox-minimap {
+  border: solid 2px black;
+}
 
-table .value {
-  text-align: left;
+/* .button-list {
+  display: inline-block;
+} */
+
+.button-item {
+  display: inline-block;
+}
+
+.lang-button {
+  position: relative;
+  background-color: #003300;
+  color: white;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.lang-button:hover {
+  border: solid 2px white;
 }

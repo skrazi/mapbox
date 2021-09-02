@@ -12,16 +12,73 @@
   border: 1px solid dodgerblue;
 } */
 
-table .value {
+#marker-table .value {
   text-align: right;
   font-weight: 700;
-  padding-left: 40px;
+  padding-left: 30px;
+}
+#marker-table .name {
+  text-align: left;
 }
 
-table .name {
-  text-align: left
+.popup {
+  width: 100%;
+  display: table;
 }
 
+
+
+
+
+#cluster-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cluster-table tr {
+  white-space: nowrap;
+  border: solid 2px white;
+}
+
+#cluster-table th {
+  white-space: nowrap;
+  text-align: left;
+  padding: 0 4px;
+}
+
+#cluster-table td {
+  padding: 0 5px;
+}
+
+
+#cluster-table td#site-id {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 4px;
+}
+
+#cluster-table td#alert-type {
+  text-align: center;
+}
+
+/* #cluster-table tr:nth-child(2n) {
+  color: #076439;
+} */
+
+#cluster-table tr:nth-child(2n+1) {
+  /* color: #ff0000; */
+  background-color: #e5e5e5;
+}
+
+#mapbox-minimap {
+  border: solid 2px rgb(54, 43, 155);
+  width: 240px;
+  height: 120px;
+}
+
+/* div.mapboxgl-ctrl-bottom-right {
+  display: block;
+} */
 
 
 /* 

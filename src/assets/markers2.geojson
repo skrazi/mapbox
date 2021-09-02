@@ -20,6 +20,38 @@
     {
       "type": "Feature",
       "properties": {
+        "siteId": 9,
+        "description": "Couba Island, Louisiana",
+        "alertType": "L2",
+        "alarms": 46
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.20058631896973,
+          29.805050160789964
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "siteId": 10,
+        "description": "Lake Charles, Texas, USA",
+        "alertType": "L2",
+        "alarms": 50
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.262939453125,
+          29.969211659636663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "siteId": 2,
         "description": "Tuna Port, Gujarat, India",
         "alertType": "L3",
@@ -94,6 +126,54 @@
         "coordinates": [
           10.646417140960693,
           -3.4402351389359564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 7,
+        "description": "Novoishimka, Kazakhstan",
+        "alertType": "L2",
+        "alarms": 38
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.62109375,
+          53.4357192066942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 8,
+        "description": "Oulu, Finland",
+        "alertType": "L3",
+        "alarms": 157
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.33447265625,
+          64.99793920061401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 12,
+        "description": "Port Alfred, South Africa",
+        "alertType": "L3",
+        "alarms": 189
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.894531249999996,
+          -33.6020382318858
         ]
       }
     }
