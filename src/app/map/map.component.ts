@@ -274,7 +274,7 @@ export class MapComponent implements OnInit, OnDestroy {
 
   // Ripple effect method that sets the HTML Canvas to show the ripple effect
   rippleEffect(alertLevel: string) {
-    var size;
+    let size;
     if (alertLevel === "L4") {
       size = 100;
     } else if (alertLevel === "L3") {
@@ -305,7 +305,19 @@ export class MapComponent implements OnInit, OnDestroy {
       
       // Call once before every frame where the icon will be used.
       render: function () {
-      const duration = 2000;
+      let duration;
+      if (alertLevel === "L4") {
+        duration = 900;
+      } else if (alertLevel === "L3") {
+        duration = 1000;
+      } else if (alertLevel === "L2") {
+        duration = 1300;
+      } else if (alertLevel === "L1") {
+        duration = 1600;
+      } else {
+        duration = 0; // cluster
+      }
+      // console.log(alertLevel + " " + duration);
       const t = (performance.now() % duration) / duration;
       
       const radius = (size / 2) * 0.2;

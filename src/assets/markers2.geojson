@@ -176,6 +176,22 @@
           -33.6020382318858
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteId": 13,
+        "description": "Mochima, Venezuela",
+        "alertType": "L4",
+        "alarms": 734
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3465805053711,
+          10.347681669224615
+        ]
+      }
     }
   ]
 }
